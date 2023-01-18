@@ -1,9 +1,8 @@
-import java.time.LocalDate;
+package schoolLab2;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Department {
     private String dept;
@@ -22,16 +21,16 @@ public class Department {
 
     public double getTotalSalary(){
         double totSalary = 0;
-//        for (Person per: persons
+//        for (schoolLab2.Person per: persons
 //             ) {
-//            if(per instanceof Faculty  ){
-//                Faculty fac = (Faculty) per;
+//            if(per instanceof schoolLab2.Faculty  ){
+//                schoolLab2.Faculty fac = (schoolLab2.Faculty) per;
 //                totSalary+=fac.getSalary();
-//            }else if( per.getClass().getSimpleName().equals("Staff") ){
-//                Staff fac = (Staff) per;
+//            }else if( per.getClass().getSimpleName().equals("schoolLab2.Staff") ){
+//                schoolLab2.Staff fac = (schoolLab2.Staff) per;
 //                totSalary+=fac.getSalary();
-//            }else if( per.getClass().getSimpleName().equals("StaffStudent") ){
-//                StaffStudent fac = (StaffStudent) per;
+//            }else if( per.getClass().getSimpleName().equals("schoolLab2.StaffStudent") ){
+//                schoolLab2.StaffStudent fac = (schoolLab2.StaffStudent) per;
 //               totSalary+=fac.getSalary();
 //           }
 //        }
@@ -48,7 +47,7 @@ public class Department {
 
         for (Person p: persons
              ) {
-            if(p.getClass().getSimpleName().equals("Faculty")){
+            if(p.getClass().getSimpleName().equals("schoolLab2.Faculty")){
                 Faculty faculty = (Faculty)p;
                 faculty.getTotalUnits();
             }
@@ -65,7 +64,7 @@ public class Department {
         List<Course> courses = new ArrayList<>();
         List<Student> students = new ArrayList<>();
 
-        System.out.println("Enter Faculty name");
+        System.out.println("Enter schoolLab2.Faculty name");
         scanner = new Scanner(System.in);
         String name = scanner.nextLine();
 

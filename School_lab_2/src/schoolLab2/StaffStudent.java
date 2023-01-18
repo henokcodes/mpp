@@ -1,3 +1,5 @@
+package schoolLab2;
+
 import java.time.LocalDate;
 
 

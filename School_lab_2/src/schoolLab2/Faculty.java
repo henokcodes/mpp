@@ -1,3 +1,5 @@
+package schoolLab2;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ public class Faculty extends Person{
 
 //    public double unitsPerFaculty(){
 //        double totUnits = 0;
-//        for(Course course: courses
+//        for(schoolLab2.Course course: courses
 //             ) {
 //            totUnits+= course.getUnits();
 //        }

@@ -1,4 +1,4 @@
-import java.util.List;
+package schoolLab2;
 
 public class Person {
 
@@ -64,10 +64,10 @@ public class Person {
         if(this instanceof Faculty  ){
                 Faculty faculty = (Faculty) this;
                 totSalary+=faculty.getSalary();
-            }else if( this.getClass().getSimpleName().equals("Staff") ){
+            }else if( this.getClass().getSimpleName().equals("schoolLab2.Staff") ){
                 Staff staff = (Staff) this;
                 totSalary+=staff.getSalary();
-            }else if( this.getClass().getSimpleName().equals("StaffStudent") ){
+            }else if( this.getClass().getSimpleName().equals("schoolLab2.StaffStudent") ){
             StaffStudent staffStudent = (StaffStudent) this;
             totSalary+=staffStudent.getSalary();
         }

@@ -1,4 +1,4 @@
-import java.util.List;
+package schoolLab2;
 
 public class Course {
     private String number;
