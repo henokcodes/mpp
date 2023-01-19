@@ -14,16 +14,44 @@ public class Department {
     public Department(String name, String location) {
         this.name = name;
         this.location = location;
-        Position ceo = new Position("CEO","owner");
-        Position manager = new Position("Manager","Reports to CEO");
-        Position worker = new Position("Worker","Reports to Manager");
-        positions.add(ceo);
-        positions.add(manager);
-        positions.add(worker);
+        positions = new ArrayList<>();
 
+    }
+    public void addPosition(Position p){
+        positions.add(p);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+
+    public List<Position> getPositions() {
+        return positions;
+    }
+
+    public void setPositions(List<Position> positions) {
+        this.positions = positions;
     }
 
     public void print(){
+        for (Position position: positions
+             ) {
+            System.out.println("Position: " + position.getTitle());
+            position.print();
+        }
 
     }
     public double getSalary(){

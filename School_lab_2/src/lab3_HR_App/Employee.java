@@ -10,7 +10,9 @@ public class Employee {
     private String SSN;
     private double salary;
 
-    public Employee(int employeeId, String firstName, String middleInitial, String lastName, String birthDate, String SSN, double salary) {
+
+
+    public Employee(int employeeId, String firstName, String middleInitial, String lastName, String birthDate, String SSN, double salary, Position pos) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.middleInitial = middleInitial;
@@ -18,11 +20,14 @@ public class Employee {
         this.birthDate = birthDate;
         this.SSN = SSN;
         this.salary = salary;
+
     }
+
 
     public void print(){
-
+        System.out.println("{ Id: "+employeeId+" Full Name: "+ firstName+ middleInitial + lastName +" }");
     }
+
     public double getSalary(){
         return salary;
     }
