@@ -49,10 +49,10 @@ public class Position {
     }
 
     public void printDownLine(){
-        for (Position p : this.inferiors
-        ) {
-            System.out.println("\tTitle: "+ p.getTitle() + ", Description: "+ p.description);
+        if(this.inferiors.contains(this)){
+            System.out.println("\t\tTitle: "+ this.getTitle() + ", Description: "+ this.description);
         }
+
     }
     public void addSuperior(Position p){
         superior = p;

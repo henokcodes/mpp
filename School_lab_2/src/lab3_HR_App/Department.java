@@ -74,27 +74,17 @@ public class Department {
     public void printReportingHierarchy(){
         for (Position position: positions
              ) {
-            if(position.getTitle().equalsIgnoreCase("Director")){
-                System.out.println("\tTitle: "+position.getTitle());
-                for (Position p: position.getInferiors()
-                     ) {
-                    p.printDownLine();
-                }
-            }
-
+                position.printDownLine();
         }
-
     }
 
     public void getDepartmentHead(){
         for (Position p : positions
         ) {
             if(p.isManager()) {
-                System.out.println("\tTitle: " + p.getTitle());
-                p.printDownLine();
+                System.out.println("\tHead: " + p.getTitle());
             }
         }
-
     }
 
 

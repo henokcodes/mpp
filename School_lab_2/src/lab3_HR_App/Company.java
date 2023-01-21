@@ -39,12 +39,21 @@ public class Company {
         for (Department deps: departments
         ) {
             System.out.println(deps.getName());
-            deps.printReportingHierarchy();
+            deps.getDepartmentHead();
+            for (Position p: deps.getPositions()
+                 ) {
+                p.printDownLine();
+            }
+
         }
 
     }
 
-    public void getTopExecutive(){
-
-    }
+//    public Position getTopExecutive(){
+//        for (Department deps: departments
+//        ) {
+//            if(deps.)
+//        }
+//    return null;
+//    }
 }

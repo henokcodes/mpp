@@ -37,10 +37,10 @@ public class Main {
         manager.addEmployees(emp2);
 
 
-        company1.print();
+//        company1.print();
 
-        System.out.println("Salary of Employees: " );
-        company1.getSalary();
+//        System.out.println("Salary of Employees: " );
+//        company1.getSalary();
 
     company1.printReportingHierarchy();
     }
