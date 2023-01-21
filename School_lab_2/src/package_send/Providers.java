@@ -9,6 +9,12 @@ public class Providers {
     double weight;
    private double rate;
 
+   private Customer customer;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public double getRate() {
         return rate;
     }
@@ -52,13 +58,23 @@ public class Providers {
     public Providers(){
         this.providers = new ArrayList<>();
     }
-    public void addPackages(String desc, double weight, String zone){
+    public void addPackages(String desc, double weight, String zone,Customer cust){
 
         providers.add(new USMail(desc,weight,zone));
         providers.add(new UPS(desc,weight,zone));
         providers.add(new FedEx(desc,weight,zone));
+        customer = cust;
     }
     public double calculatePrice(){
+        if(customer!=null) {
+
+
+            if (customer.getClass().getSimpleName().equalsIgnoreCase("Student")) {
+                return getRate() * getWeight() - getRate() * getWeight() * 10 / 100;
+            } else if (customer.getClass().getSimpleName().equalsIgnoreCase("Senior")) {
+                return getRate() * getWeight() - getRate() * getWeight() * 15 / 100;
+            }
+        }
         return getRate()*getWeight();
     }
 
