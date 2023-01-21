@@ -2,6 +2,7 @@ package lab3_HR_App;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Department {
 
@@ -18,7 +19,14 @@ public class Department {
 
     }
     public void addPosition(Position p){
+
+        if(p.getTitle().equalsIgnoreCase("Director")){
+            p.addSuperior(p);
+        }else{
+            p.addInferior(p);
+        }
         positions.add(p);
+
     }
 
     public String getName() {
@@ -55,6 +63,52 @@ public class Department {
 
     }
     public double getSalary(){
-        return salary;
+        double total = 0;
+        for (Position position: positions
+        ) {
+           total+= position.getSalary();
+        }
+        return total;
+    }
+
+    public void printReportingHierarchy(){
+        for (Position position: positions
+             ) {
+            if(position.getTitle().equalsIgnoreCase("Director")){
+                System.out.println("\tTitle: "+position.getTitle());
+                for (Position p: position.getInferiors()
+                     ) {
+                    p.printDownLine();
+                }
+            }
+
+        }
+
+    }
+
+    public void getDepartmentHead(){
+        for (Position p : positions
+        ) {
+            if(p.isManager()) {
+                System.out.println("\tTitle: " + p.getTitle());
+                p.printDownLine();
+            }
+        }
+
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Department that = (Department) o;
+
+        return positions.equals(that.positions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(positions);
     }
 }

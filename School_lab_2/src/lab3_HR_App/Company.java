@@ -26,10 +26,25 @@ public class Company {
             deps.print();
         }
     }
-    public double getSalary(){
+    public void getSalary(){
+        double totSalary = 0;
         for (Department department: departments
         ) {
-            department.getSalary();
+          totSalary+= department.getSalary();
         }
+        System.out.println("Total Salary = "+ totSalary);
+    }
+
+    public void printReportingHierarchy(){
+        for (Department deps: departments
+        ) {
+            System.out.println(deps.getName());
+            deps.printReportingHierarchy();
+        }
+
+    }
+
+    public void getTopExecutive(){
+
     }
 }
