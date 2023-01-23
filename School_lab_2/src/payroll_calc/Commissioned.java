@@ -36,7 +36,6 @@ public class Commissioned extends Employee {
     @Override
     public double calcGrossPay(LocalDate dateRange) {
         double orderAmount = 0;
-        System.out.println(orders);
         for (Order order: orders
              ) {
           orderAmount +=  order.getOrderAmount();

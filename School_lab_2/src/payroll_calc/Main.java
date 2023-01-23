@@ -8,17 +8,18 @@ public class Main {
         Employee hourly= new Hourly(123,10,30);
         Employee salaried = new Salaried(234,2000);
         Employee commissioned = new Commissioned(342,1500);
+        //baseSalary + 0.07*eachOrderAmount
 
-        ((Commissioned)commissioned).addOrders(new Order(12,LocalDate.of(2020,04,01), 23));
-        ((Commissioned)commissioned).addOrders(new Order(2,LocalDate.of(2020,04,01), 51));
+        ((Commissioned)commissioned).addOrders(new Order(12,LocalDate.of(2020,04,01), 23)); //
+        ((Commissioned)commissioned).addOrders(new Order(2,LocalDate.of(2020,04,01), 51)); // 5.18
 
-        hourly.addPaychecks(new Paycheck(LocalDate.of(2020,04,01), hourly));
+        hourly.addPaychecks(new Paycheck(LocalDate.of(2021,04,01), hourly));
         salaried.addPaychecks(new Paycheck(LocalDate.of(2020,04,01), salaried));
         commissioned.addPaychecks(new Paycheck( LocalDate.of(2020,04,01), commissioned));
 
 
 
-        hourly.calcCompensation(04,2020);
+        hourly.calcCompensation(04,2021);
         salaried.calcCompensation(04,2020);
         commissioned.calcCompensation(04,2020);
 
