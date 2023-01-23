@@ -1,13 +1,17 @@
 package payroll_calc;
 
-public class Hourly {
+import java.time.LocalDate;
+
+public class Hourly extends Employee {
 
     private double hourlyWage;
     private double hoursPerWeek;
 
-    public Hourly(double hourlyWage, double hoursPerWeek) {
+    public Hourly(int id,double hourlyWage, double hoursPerWeek) {
+        super.setEmpId(id);
         this.hourlyWage = hourlyWage;
         this.hoursPerWeek = hoursPerWeek;
+
     }
 
     public double getHourlyWage() {
@@ -24,5 +28,16 @@ public class Hourly {
 
     public void setHoursPerWeek(double hoursPerWeek) {
         this.hoursPerWeek = hoursPerWeek;
+    }
+
+    @Override
+    public double calcGrossPay(LocalDate dateRange) {
+//        for (Paycheck paycheck: getPaychecks()
+//             ) {
+//           paycheck.
+//        }
+        System.out.println("Gross Payment is "+ hourlyWage*hoursPerWeek*4);
+    return hourlyWage*hoursPerWeek*4;
+
     }
 }

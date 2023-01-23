@@ -1,10 +1,13 @@
 package payroll_calc;
 
+import java.time.LocalDate;
+
 public class Salaried extends Employee{
 
     private double salary;
 
-    public Salaried(double salary) {
+    public Salaried(int id,double salary) {
+        super.setEmpId(id);
         this.salary = salary;
     }
 
@@ -17,7 +20,8 @@ public class Salaried extends Employee{
     }
 
     @Override
-    public void calcGrossPay(DateRange dateRange) {
-
+    public double calcGrossPay(LocalDate dateRange) {
+        System.out.println("Gross Payment is "+ salary);
+        return salary;
     }
 }
