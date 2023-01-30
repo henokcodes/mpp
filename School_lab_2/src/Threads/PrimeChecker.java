@@ -1,8 +1,11 @@
 package Threads;
 
+import java.util.TreeSet;
+
 public class PrimeChecker implements Runnable{
     private int lowerLimit;
     private int upperLimit;
+    public static TreeSet<Integer> treeSet = new TreeSet<>();
 
     public PrimeChecker(int lowerLimit, int upperLimit) {
         this.lowerLimit = lowerLimit;
@@ -12,10 +15,12 @@ public class PrimeChecker implements Runnable{
     boolean isPrime(int n){
         if (n <= 1)
             return true;
-        // Check from 2 to n-1
-        for (int i = 2; i < n; i++)
-            if (n % i == 0)
+          for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
                 return false;
+            }
+        }
+
         return true;
     }
 
@@ -23,9 +28,14 @@ public class PrimeChecker implements Runnable{
     public void run() {
         for (int i=lowerLimit;i<=upperLimit;i++){
             if(isPrime(i)){
-                System.out.println(i+ " ");
+                treeSet.add(i);
             }
         }
+
     }
+    public static void print(){
+        System.out.println(treeSet);
+    }
+
 }
 
