@@ -34,7 +34,7 @@ public class PrimeChecker implements Runnable{
 
     }
     public static void print(){
-        System.out.println(treeSet);
+//        System.out.println(treeSet);
     }
 
 }
