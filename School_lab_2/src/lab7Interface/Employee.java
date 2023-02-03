@@ -59,4 +59,10 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Employee cloned = (Employee)super.clone();
+        return cloned;
+    }
 }

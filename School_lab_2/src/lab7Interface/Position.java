@@ -91,4 +91,12 @@ public class Position {
                 ", employee=" + employee +
                 '}';
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Position cloned = (Position) super.clone();
+        cloned.employee = this.employee;
+        cloned.superior = this.superior;
+        return cloned;
+    }
 }
