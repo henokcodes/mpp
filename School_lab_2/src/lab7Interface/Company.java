@@ -49,6 +49,10 @@ public class Company {
 
     }
 
+    public List<Department> getDepratments() {
+        return  this.departments;
+    }
+
 //    public Position getTopExecutive(){
 //        for (Department deps: departments
 //        ) {

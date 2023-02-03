@@ -34,12 +34,13 @@ public class Main {
         director.addEmployees(emp1);
         manager.addEmployees(emp2);
 
-
 //        company1.print();
 
 //        System.out.println("Salary of Employees: " );
 //        company1.getSalary();
 
-    company1.printReportingHierarchy();
+//    company1.printReportingHierarchy();
     }
+
+
 }
