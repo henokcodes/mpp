@@ -1,0 +1,23 @@
+1. Name the differences between imperative and functional programming.
+
+Functional
+It is generally a process of developing software simply by composing pure functions, avoiding or minimizing side effects, shared data, and mutable data.
+It mainly focuses on what programs should be executed or operate i.e., results.
+It uses functions to perform everything.
+Its advantages include bugs-free code, increase performance, better encapsulation, increase reusability, increase testability, etc.
+
+Imperative
+It is generally a process of describing steps that simply change the state of the computer.
+It mainly focuses on describing how the program executes or operates i.e., process.
+It uses statements that change a program’s state.
+Its advantages include easy to learn, easy to read, a conceptual model is easy to learn, etc.
+
+2. Explain the meaning of declarative programming. Give an example.
+
+Declarative Programming as the name suggests is a type of programming paradigm that describes what programs to be executed.
+Developers are more concerned with the answer that is received. It declares what kind of results we want and leave programming language aside focusing on simply figuring out how to produce them.
+
+3. Name the benefits of including functional style programming in Java
+
+The biggest advantage of adopting functional programming in any language, including Java, is pure functions and immutable states.
+Functional programming is more of a change in how we reason about problems and their solutions and how to structure the algorithm.
