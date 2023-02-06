@@ -224,6 +224,11 @@ public class ProcessingEmployees
 
         Stream strings = Stream.of("A", "good", "day", "to", "write", "some", "Java");
 
+        String concat = (String) strings.reduce("",
+                (element1, element2) -> (String) element1 + " "+ (String) element2);
+        System.out.println(concat);
+
+
     } // end main
 
     public static int countWords(List<String> words, char c, char d, int len){
